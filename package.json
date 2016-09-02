@@ -1,0 +1,51 @@
+{
+  "name": "redux-inferno-hot-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Redux Inferno project with hot loading",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/citrullin/redux-inferno-hot-boilerplate.git"
+  },
+  "keywords": [
+    "redux",
+    "inferno",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Philipp Blum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/citrullin/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint": "^1.10.3",
+    "babel-plugin-inferno": "^0.7.7",
+    "inferno-test-utils": "^0.7.26",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "inferno": "^0.7.26",
+    "redux": "^3.5.2",
+    "inferno-dom": "^0.7.26",
+    "inferno-redux": "^0.7.26",
+    "inferno-component": "^0.7.26",
+    "inferno-router": "^0.7.26"
+  }
+}
