@@ -13,6 +13,7 @@ export default class App extends Component {
                     <NavigationBarElement name="element nummer 1"/>
                     <NavigationBarElement name="element nummer 2"/>
                 </NavigationBar>
+                {/* Following is the content of the current page inserted */}
                 {this.props.children}
             </div>
         );
