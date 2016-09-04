@@ -4,5 +4,5 @@ import { combineReducers } from 'redux';
 //import {reducer as reduxAsyncConnect } from 'redux-a';
 
 export default combineReducers({
-    articleList: updateArticleFilter
+    articles: updateArticleFilter
 });

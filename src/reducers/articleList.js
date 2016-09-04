@@ -30,6 +30,8 @@ export const updateArticleFilter = (state = [
                     article.show = false;
                 }
             });
+        case ActionTypes.RECEIVED_ARTICLES:
+            return action.articles;
         default:
             return state;
     }
