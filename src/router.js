@@ -7,6 +7,10 @@ import BlogFrontpage from './containers/Blog/BlogFrontpage';
 
 import {store} from './store';
 
+import {getAllArticles} from './actions';
+
+store.dispatch(getAllArticles());
+
 export default function AppRouter() {
 
     return(
