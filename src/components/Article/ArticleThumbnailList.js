@@ -1,5 +1,6 @@
 import Inferno from 'inferno';
 import Component from 'inferno-component';
+import connect  from 'inferno-redux';
 import * as ArticleThumbnail from './Thumbnail/Container';
 
 export default class ArticleThumbnailList extends Component{
@@ -15,7 +16,7 @@ export default class ArticleThumbnailList extends Component{
         const state = store.getState();
 
         return(
-            state.articleList.forEach(article =>{
+            state.articles.forEach(article =>{
                 return this._renderArticle(article)
             })
         );
