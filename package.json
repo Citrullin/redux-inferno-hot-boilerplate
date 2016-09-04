@@ -38,7 +38,9 @@
     "babel-plugin-inferno": "^0.7.7",
     "inferno-test-utils": "^0.7.26",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "redux-logger": "^2.6.1",
+    "json-loader": "^0.5.4"
   },
   "dependencies": {
     "inferno": "^0.7.26",
@@ -46,6 +48,7 @@
     "inferno-dom": "^0.7.26",
     "inferno-redux": "^0.7.26",
     "inferno-component": "^0.7.26",
-    "inferno-router": "^0.7.26"
+    "inferno-router": "^0.7.26",
+    "redux-thunk": "^2.1.0"
   }
 }
