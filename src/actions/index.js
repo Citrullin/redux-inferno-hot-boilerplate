@@ -1,16 +1,16 @@
 import * as ActionTypes from '../constants/ActionTypes';
-import articles from '../api/articles';
+import ArticleAPI from 'ArticleAPI';
 
 function receivedArticles(articles){
     return {
-        type: ActionTypes.RECEIVED_ARTICLES,
-        articles: articles
+        type:       ActionTypes.RECEIVED_ARTICLES,
+        articles:   articles
     }
 }
 
 export function getAllArticles(){
     return (dispatch, getState) => {
-        articles.getArticles(articles => {
+        ArticleAPI.getArticles(articles => {
             dispatch(receivedArticles(articles));
         })
     }

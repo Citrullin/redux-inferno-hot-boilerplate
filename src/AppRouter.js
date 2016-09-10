@@ -2,12 +2,12 @@ import Inferno from 'inferno';
 import { Router, Route, browserHistory } from 'inferno-router';
 import { Provider } from 'inferno-redux';
 
-import App from './App';
-import BlogFrontpage from './containers/Blog/BlogFrontpage';
+import App from 'App';
+import BlogFrontpage from 'BlogFrontpage';
 
-import {store} from './store';
+import {store} from 'store';
 
-import {getAllArticles} from './actions';
+import {getAllArticles} from 'actions';
 
 store.dispatch(getAllArticles());
 

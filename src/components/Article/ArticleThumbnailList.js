@@ -3,7 +3,7 @@ import Component from 'inferno-component';
 import { connect }  from 'inferno-redux';
 
 import {getAllArticles} from '../../actions/index';
-import {getArticleList} from '../../reducers/articleList';
+import {getArticleList} from 'articleListReducers';
 import {ArticleThumbnailContainer} from './Thumbnail/ArticleThumbnailContainer';
 
 class ArticleThumbnailList extends Component{
@@ -33,5 +33,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    { getAllArticles }
+    {getAllArticles}
 )(ArticleThumbnailList)

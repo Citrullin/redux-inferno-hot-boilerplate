@@ -2,7 +2,7 @@
  action = {type: 'DELETE_ARTICLE_FILTER_RULE', name: 'sport'}
  action = {type: 'ADD_ARTICLE_FILTER_RULE', name: 'sport'}
  */
-import * as ActionTypes from '../constants/ActionTypes';
+import * as ActionTypes from 'ActionTypes';
 
 export const updateArticleFilter = (state = [
     {

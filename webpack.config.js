@@ -16,6 +16,21 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
+  resolve: {
+    root: path.resolve('src/'),
+    alias: {
+      BlogFrontpage: 'containers/Blog/BlogFrontpage',
+      ActionTypes: 'constants/ActionTypes',
+      App: 'App',
+      AppRouter: 'AppRouter',
+      actions: 'actions',
+      appReducers: 'reducers',
+      articleListReducers: 'reducers/articleList',
+      ArticleAPI: 'api/articles'
+    },
+    modulesDirectory: ['node_modules', './src'],
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
       loaders: [
         {
@@ -28,15 +43,15 @@ module.exports = {
           loaders: ['json']
         },
         {
+          test: /\.woff$|\.ttf$|\.wav$|\.mp3$/,
+          loader: "file"
+        },
+        {
           test: /.*\.(gif|png|jpe?g|svg)$/i,
           loaders: [
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack'
+            'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
           ]
-        },
-        {
-          test: /\.jpg$/,
-          loader: 'file'
         }
     ]
   }
