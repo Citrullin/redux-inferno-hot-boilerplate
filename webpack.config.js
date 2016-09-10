@@ -26,6 +26,17 @@ module.exports = {
         {
           test: /\.json$/,
           loaders: ['json']
+        },
+        {
+          test: /.*\.(gif|png|jpe?g|svg)$/i,
+          loaders: [
+            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack'
+          ]
+        },
+        {
+          test: /\.jpg$/,
+          loader: 'file'
         }
     ]
   }

@@ -18,7 +18,7 @@ export const updateArticleFilter = (state = [
 
     switch (action.type) {
         case ActionTypes.ADD_ARTICLE_FILTER_RULE:
-            return state.map(article => {
+            return state.articles.map(article => {
                 var hasTag =
                     article.tags.map(tag => {
                         if (tag == action.name) {
@@ -35,4 +35,12 @@ export const updateArticleFilter = (state = [
         default:
             return state;
     }
+};
+
+export const getArticleList = (state) => {
+  return state.articles.filter(article => {
+     if(article.visible){
+         return true;
+     }
+  });
 };

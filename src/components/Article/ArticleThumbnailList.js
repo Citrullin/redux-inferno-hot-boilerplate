@@ -1,24 +1,37 @@
 import Inferno from 'inferno';
 import Component from 'inferno-component';
-import connect  from 'inferno-redux';
-import * as ArticleThumbnail from './Thumbnail/Container';
+import { connect }  from 'inferno-redux';
 
-export default class ArticleThumbnailList extends Component{
+import {getAllArticles} from '../../actions/index';
+import {getArticleList} from '../../reducers/articleList';
+import {ArticleThumbnailContainer} from './Thumbnail/ArticleThumbnailContainer';
+
+class ArticleThumbnailList extends Component{
     _renderArticle(article){
         return (
-            <ArticleThumbnail image={ article.image }
-                              description={ article.description } />
+            <ArticleThumbnailContainer data={ article } />
         )
     };
 
     render(){
         const store = this.context.store;
-        const state = store.getState();
 
-        return(
-            state.articles.forEach(article =>{
-                return this._renderArticle(article)
-            })
-        );
+        var elements = [];
+        store.getState().articles.forEach(article =>{
+            elements.push(this._renderArticle(article));
+        });
+
+        return (<div class="articleThumbnailList">{elements}</div>);
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        articles: getArticleList(state)
+    }
+};
+
+export default connect(
+    mapStateToProps,
+    { getAllArticles }
+)(ArticleThumbnailList)
